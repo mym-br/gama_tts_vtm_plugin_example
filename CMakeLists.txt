@@ -5,7 +5,7 @@ if(UNIX)
     if(APPLE)
         set(CMAKE_CXX_FLAGS "-std=c++17 -stdlib=libc++")
     else()
-        set(CMAKE_CXX_FLAGS "-std=c++17 -Wall -Wextra -march=native")
+        set(CMAKE_CXX_FLAGS "-std=c++17 -Wall -Wextra -march=native -fvisibility=hidden")
     endif()
 endif()
 

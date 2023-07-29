@@ -29,10 +29,12 @@
 #ifndef VTM_GAMA_TTS_H
 #define VTM_GAMA_TTS_H
 
+#define DLL_PUBLIC __attribute__((visibility ("default")))
+
 extern "C" {
 
-void* GAMA_TTS_construct_vocal_tract_model(const void *config_data, int is_interactive);
-void GAMA_TTS_destruct_vocal_tract_model(void *vtm);
+DLL_PUBLIC void* GAMA_TTS_construct_vocal_tract_model(const void *config_data, int is_interactive);
+DLL_PUBLIC void GAMA_TTS_destruct_vocal_tract_model(void *vtm);
 
 } // extern "C"
 
